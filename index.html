@@ -9,23 +9,28 @@
 
         <style type="text/css">
             body {
-                background-image: url("ship-window.png");
-                background-size: 100vw, 100vh;
+                background-image: url("spatiul-cosmic.jpg");
+                background-repeat: no-repeat;
+                font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+            }
+            #ship-windows {
+                background-image: url("ship-windows.png");
+                background-size: 100vw 100vh;
                 background-repeat: no-repeat;
                 height: 100vh;
                 width: 100vw;
-                font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+                background-position-y: top;
             }
             #info-container {
-                height: 33vh;
-                width: 35vw;
-                position: fixed;
-                margin-top: 5vh;
-                margin-left: 32vw;
+                height: 500px;
+                width: 500px;
+                position: relative;
+                padding-top: 5vh;
+                margin: auto;
                 text-align: center;
             }
             .logo {
-                height: 30vh;
+                height: 200px;
                 width: auto;
                 padding-bottom: 20px;
             }
@@ -45,18 +50,39 @@
             .btn:visited {
                 background-color: #61bb46;
             }
+            @media screen and (max-width: 640px) {
+                #info-container {
+                    width: 80vw;
+                }
+                h4 {
+                    font-size: 120%;
+                }
+                h5 {
+                    font-size: 100%;
+                    padding: 0 2px 0 2px;
+                }
+                #ship-windows {
+                    background-image: url("ship-windows-vert.png"); 
+                }
+                .logo {
+                    height: 150px;
+                    width: auto;
+                }
+            }
         </style>
     </head>
     <body>
-        <div id="info-container">
-            <img class="logo" src="Alien eJuice Logo W.png">
-            <div id="info">
-                <h4 style="color: #61bb46;">Welcome to Alien eJuice Earthling.</h4>
-                <h5 style="color: white;">We've traveled across the universe to bring you the most extraordinary and extraterrestrial eJuice available in this quadrant of the galaxy.<br style="margin-bottom: 10px;">
-                Unfortunately our stores ran out by the time we reached Jupiter and we won't be able to restock until we reach quadrant 36982A0. In the meantime please use this contact page to reach us!</h5>
-                <a href="#">
-                    <button class="btn">Broadcast to ship</button>
-                </a>
+        <div id="ship-windows">
+            <div id="info-container">
+                <img class="logo" src="Alien eJuice Logo W.png">
+                <div id="info">
+                    <h4 style="color: #61bb46;">Welcome to Alien eJuice Earthling.</h4>
+                    <h5 style="color: white;">We've traveled across the universe to bring you the most extraordinary and extraterrestrial eJuice available in this quadrant of the galaxy.<br style="margin-bottom: 10px;">
+                    Unfortunately our stores ran out by the time we reached Jupiter and we won't be able to restock until we reach quadrant 36982A0. In the meantime please use this contact page to reach us!</h5>
+                    <a href="#">
+                        <button class="btn">Broadcast to ship</button>
+                    </a>
+                </div>
             </div>
         </div>
         

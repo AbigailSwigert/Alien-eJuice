@@ -19,6 +19,7 @@
         body {
             padding-top: 200px;
             text-align: center;
+            font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
         }
     </style>
 </head>

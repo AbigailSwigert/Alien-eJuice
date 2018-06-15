@@ -52,24 +52,23 @@
         <div id="form">
             <h1>Please fill out our contact form:</h1>
             <small id="requiredFields" class="form-text text-muted">All fields are required</small>
-            <form>
+            <form action="contact.php" method="post">
                 <div class="form-group">
                     <label for="name">Your Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Jane Doe" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" class="form-control" id="email" placeholder="JaneDoe@email.com" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="comment">Let us know what this is about:</label>
-                    <textarea class="form-control" id="comment" rows="5" placeholder="Your message here..." required></textarea>
+                    <label for="message">Let us know what this is about:</label>
+                    <textarea class="form-control" id="message" rows="5" name="message" placeholder="Your message here..." required></textarea>
                 </div>
-                <button type="submit" class="btn">Submit</button>
+                <button id="submit" type="submit" name="submit" class="btn">Submit</button>
                 </div>
             </form>
         </div>
-        <div id="footer"></div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

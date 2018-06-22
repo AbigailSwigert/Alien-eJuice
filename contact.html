@@ -27,8 +27,10 @@
             }
            #form {
                 width: 50vw;
-                margin: 100px auto 0 auto;
+                margin: 175px auto 0 auto;
                 font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+                color: #61bb46;
+                text-align: center;
             }
             img {
                 height: 100px;
@@ -49,19 +51,33 @@
             .btn:visited {
                 background-color: #61bb46;
             }
-            @media screen and (max-width: 800px){
-                #form {
-                    width: 75vw;
-                    margin: auto;
-                }
-            }
-            @media screen and (max-width: 800px){
+            @media screen and (orientation: portrait) and (max-width: 800px){
                 h1{
                     font-size: 150%;
                     padding-top: 10px;
                 }
                 #form {
-                    margin: 120px auto 0 auto;
+                    margin: 150px auto 0 auto;
+                    width: 85vw;
+                }
+            } 
+            @media screen and (orientation: landscape) and (max-width: 1000px) {
+                #form {
+                    margin: 12vh auto 0 auto;
+                    padding-bottom: 10px;
+                    width: 60vw;
+                }
+                h1 {
+                    font-size: 120%;
+                }
+                img {
+                    height: 75px;
+                }
+                input {
+                    width: 250px !important;
+                }
+                .btn {
+                    margin: auto;
                 }
             }
         </style>
@@ -73,19 +89,19 @@
         <div id="form-container">
         <div id="form">
             <h1>Please fill out our contact form:</h1>
-            <small id="requiredFields" class="form-text text-muted">All fields are required</small>
+            <small id="requiredFields" class="form-text" style="color: white; text-align: left;">All fields are required</small>
             <form action="contact.php" method="post">
                 <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
+                    <label for="name" style="float: left; margin-right: 57px;">Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required >
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
+                    <label for="email" style="float: left; margin-right: 20px;">Email Address:</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Let us know what this is about:</label>
-                    <textarea class="form-control" id="message" rows="5" name="message" placeholder="Your message here..." required></textarea>
+                    <label for="message" style="float: left">Let us know what this is about:</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Your message here..." required></textarea>
                 </div>
                 <button id="submit" type="submit" name="submit" class="btn">Submit</button>
                 </div>
